@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>areeba arbab — fieldnotes</title>
+  <meta name="description" content="areeba arbab. fieldnotes on mathematics, philosophy, and the things between them.">
+  <meta property="og:title" content="areeba arbab — fieldnotes">
+  <meta property="og:description" content="fieldnotes on mathematics, philosophy, and the things between them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="home">
+
+  <!-- Threshold (hidden until JS runs; stays hidden if already seen) -->
+  <div id="threshold" class="threshold" style="display:none" aria-modal="true" role="dialog">
+    <div class="threshold-inner">
+      <button class="threshold-word" type="button">glad tidings to the stranger</button>
+    </div>
+  </div>
+
+  <main class="home-grid">
+
+    <!-- LEFT: name + ascii (sticky on desktop) -->
+    <div class="home-left">
+      <h1 class="home-name">areeba arbab</h1>
+
+      <div class="ascii-field">
+        <pre id="ascii-hero" class="ascii ascii-hero" aria-hidden="true"></pre>
+        <!-- drifting glyphs -->
+        <span class="drift drift-0"  aria-hidden="true">·</span>
+        <span class="drift drift-1"  aria-hidden="true">✦</span>
+        <span class="drift drift-2"  aria-hidden="true">+</span>
+        <span class="drift drift-3"  aria-hidden="true">◦</span>
+        <span class="drift drift-4"  aria-hidden="true">✶</span>
+        <span class="drift drift-5"  aria-hidden="true">·</span>
+        <span class="drift drift-6"  aria-hidden="true">✧</span>
+        <span class="drift drift-7"  aria-hidden="true">+</span>
+        <span class="drift drift-8"  aria-hidden="true">·</span>
+        <span class="drift drift-9"  aria-hidden="true">+</span>
+        <span class="drift drift-10" aria-hidden="true">✕</span>
+        <span class="drift drift-11" aria-hidden="true">×</span>
+        <span class="drift drift-12" aria-hidden="true">·</span>
+        <span class="drift drift-13" aria-hidden="true">✦</span>
+        <span class="drift drift-14" aria-hidden="true">+</span>
+        <span class="drift drift-15" aria-hidden="true">◦</span>
+        <span class="drift drift-16" aria-hidden="true">·</span>
+        <span class="drift drift-17" aria-hidden="true">✧</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: epigraph → intro → writings → nav -->
+    <div>
+      <div id="custom-intro"></div>
+
+      <!-- Cluster index populated by JS -->
+      <div id="clusters"></div>
+
+      <nav class="home-nav">
+        <a href="colophon.html">colophon</a>
+      </nav>
+    </div>
+
+  </main>
+
+  <script src="site.js"></script>
+</body>
+</html>

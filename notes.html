@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fieldnotes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="notes">
+
+  <main style="min-height:100vh; padding-bottom: 6rem;">
+    <div class="column notes-header">
+
+      <p class="muted" style="font-size:0.85em; margin-bottom:0;">
+        <a href="index.html">threshold</a>
+      </p>
+
+      <p id="notes-kind" class="notes-kind muted"></p>
+      
+
+    </div>
+
+    <div id="notes-content">
+      <div class="column" style="margin-top:2.5rem;">
+        <!-- sigil -->
+        <pre id="notes-sigil" class="sigil ascii-sm muted" aria-hidden="true"></pre>
+        <!-- body paragraphs + interludes -->
+        <div id="notes-body" class="notes-body"></div>
+      </div>
+
+      <div class="column" style="margin-top:2rem;">
+        <hr class="rule">
+        <!-- adjacent + prev/next navigation -->
+        <nav id="notes-nav" class="entry-nav"></nav>
+        <p style="margin-top:3rem; font-size:0.82em;">
+          <a href="index.html">threshold</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* =============================================
+   fieldnotes — areeba arbab
+   one CSS file, no build tools needed
+   ============================================= */
+
+:root {
+  --bg:              #ffffff;
+  --ink:             #111111;
+  --muted:           #8a8a8a;
+  --rule:            #e6e6e6;
+  --ink-link:        #1a1aff;
+  --ink-link-hover:  #0000cc;
+  --ink-link-visited:#4b3fb8;
+  --accent-pink:     #e89bb0;
+}
+
+* { border-radius: 0 !important; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, "Liberation Serif", serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0; padding: 0;
+}
+@media (min-width: 768px) { html, body { font-size: 20px; } }
+
+::selection { background: var(--accent-pink); color: var(--ink); }
+
+a {
+  color: var(--ink-link);
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 120ms linear;
+}
+a:hover  { color: var(--ink-link-hover); text-decoration-thickness: 2px; }
+a:active { color: var(--ink-link-hover); }
+a:visited { color: var(--ink-link-visited); }
+a:visited:hover { color: var(--ink-link-hover); }
+
+.serif  { font-family: "Instrument Serif", "Times New Roman", Georgia, serif; letter-spacing: 0.005em; }
+.muted  { color: var(--muted); }
+.accent-pink { color: var(--accent-pink); }
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* ASCII */
+pre.ascii {
+  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0;
+  white-space: pre;
+  color: var(--ink);
+  margin: 0;
+  user-select: none;
+}
+pre.ascii-sm    { font-size: 10px; line-height: 10px; }
+pre.ascii-rail  { font-size: 9px;  line-height: 9px;  }
+pre.ascii-hero  { font-size: clamp(9px, 2.55vw, 13px); line-height: 1; }
+@media (min-width: 768px) {
+  pre.ascii-hero { font-size: clamp(11px, 1.04vw, 14px); }
+}
+
+/* Column */
+.column      { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+.column-wide { max-width: 64ch;  margin: 0 auto; padding: 0 1.25rem; }
+
+/* =============================================
+   THRESHOLD
+   ============================================= */
+.threshold {
+  position: fixed; inset: 0; z-index: 60;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem 1.5rem;
+  transition: opacity 700ms ease;
+}
+.threshold.leaving { opacity: 0; pointer-events: none; }
+.threshold-inner {
+  max-width: 36rem;
+  display: flex; flex-direction: column; gap: 1.6rem;
+  text-align: left;
+}
+.threshold-mark {
+  margin: 0;
+  font-style: italic; color: var(--muted);
+  letter-spacing: 0.08em; font-size: 0.85em;
+}
+.threshold-intro {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px; line-height: 1.55; color: var(--ink);
+}
+@media (min-width: 768px) { .threshold-intro { font-size: 26px; } }
+.threshold-word {
+  align-self: flex-start;
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic; font-size: 22px;
+  color: var(--ink-link);
+  text-decoration: underline; text-underline-offset: 4px;
+  letter-spacing: 0.01em;
+}
+.threshold-word:hover { color: var(--ink-link-hover); }
+
+/* =============================================
+   HOMEPAGE
+   ============================================= */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 2rem 1.25rem 6rem;
+  max-width: 1280px; margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .home-grid {
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 4rem; padding: 3rem 2rem 8rem;
+  }
+}
+.home-left {
+  display: flex; flex-direction: column; gap: 2rem;
+}
+@media (min-width: 900px) {
+  .home-left {
+    position: sticky; top: 2rem;
+    align-self: start;
+    max-height: calc(100vh - 4rem);
+  }
+}
+.home-name {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400; font-size: 40px;
+  line-height: 1.05; margin: 0; letter-spacing: -0.01em;
+}
+@media (min-width: 900px) { .home-name { font-size: 56px; } }
+
+/* ascii field with floating glyphs */
+.ascii-field {
+  position: relative;
+  margin: 0.25rem -1.25rem 0;
+  padding: 2.25rem 0 2.75rem;
+  overflow: visible;
+  display: flex; justify-content: center;
+  isolation: isolate;
+  max-width: min(100vw, 720px);
+}
+.ascii-field pre.ascii {
+  animation: ascii-sway 16s ease-in-out infinite;
+  color: rgba(17,17,17,0.88);
+  max-width: 100%; overflow: visible;
+}
+@keyframes ascii-sway {
+  0%,100% { transform: translate(0,0); }
+  25%     { transform: translate(2px,-1px); }
+  50%     { transform: translate(-1px,2px); }
+  75%     { transform: translate(1px,1px); }
+}
+.drift {
+  position: absolute;
+  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+  color: var(--muted); opacity: 0.48;
+  font-size: 15px; pointer-events: none; user-select: none;
+  animation: drift-float 11s ease-in-out infinite;
+}
+.drift-0  { top: 2px;    left: 4%;   animation-delay: 0s;   }
+.drift-1  { top: 8%;     right: 6%;  animation-delay: 1.4s; }
+.drift-2  { bottom: 0;   left: 16%;  animation-delay: 2.7s; }
+.drift-3  { bottom: 4%;  right: 3%;  animation-delay: 0.6s; }
+.drift-4  { top: 40%;    left: 1%;   animation-delay: 3.5s; }
+.drift-5  { top: 66%;    right: 1%;  animation-delay: 2.1s; }
+.drift-6  { top: -2%;    right: 26%; animation-delay: 4.2s; opacity:0.35; }
+.drift-7  { bottom: 24%; left: 3%;   animation-delay: 1.9s; opacity:0.35; }
+.drift-8  { top: 28%;    left: -1%;  animation-delay: 5.1s; opacity:0.3;  font-size:13px; }
+.drift-9  { bottom: 8%;  right: 18%; animation-delay: 3.2s; opacity:0.3;  font-size:13px; }
+.drift-10 { top: 18%;    left: 12%;  animation-delay: 4.7s; opacity:0.38; }
+.drift-11 { bottom: 34%; right: 10%; animation-delay: 6.1s; opacity:0.34; }
+.drift-12 { top: 54%;    left: 20%;  animation-delay: 7.2s; opacity:0.28; font-size:12px; }
+.drift-13 { top: 0;      right: 44%; animation-delay: 2.4s; opacity:0.32; font-size:13px; }
+.drift-14 { bottom: -2%; right: 36%; animation-delay: 5.8s; opacity:0.3;  }
+.drift-15 { top: 74%;    left: 42%;  animation-delay: 6.6s; opacity:0.24; font-size:12px; }
+.drift-16 { top: 22%;    right: -1%; animation-delay: 8.1s; opacity:0.28; font-size:12px; }
+.drift-17 { bottom: 16%; left: 0;    animation-delay: 7.7s; opacity:0.28; font-size:12px; }
+@keyframes drift-float {
+  0%,100% { transform: translate(0,0);      opacity: 0.48; }
+  50%     { transform: translate(12px,-14px); opacity: 0.14; }
+}
+@media (max-width: 899px) {
+  .home-grid { gap: 1.25rem; }
+  .home-left { gap: 0.9rem; }
+  .ascii-field {
+    margin: -0.35rem -1.25rem 0; padding: 1.3rem 0 1.6rem;
+    transform: translateX(-3vw); width: calc(100vw + 6vw);
+  }
+  .ascii-field pre.ascii { opacity: 0.78; }
+  .drift { font-size: 13px; opacity: 0.34; }
+  .drift-4, .drift-8,  .drift-16 { left: 4%; right: auto; }
+  .drift-5, .drift-17              { right: 4%; left: auto; }
+}
+.epigraph { margin: 0 0 2.5rem; padding: 0; }
+.epigraph blockquote {
+  margin: 0; font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1em; line-height: 1.55; color: var(--ink);
+}
+.epigraph figcaption {
+  margin-top: 0.4rem; font-size: 0.82em;
+  color: var(--muted); font-style: normal;
+}
+.home-intro {
+  font-style: normal; color: var(--ink);
+  font-size: 19px; line-height: 1.6; margin: 0 0 3rem;
+}
+@media (min-width: 900px) { .home-intro { font-size: 20px; } }
+.writings-heading {
+  font-family: "Times New Roman", serif; font-weight: 400;
+  font-style: normal; font-size: 1.2em; margin: 0 0 1rem; color: var(--ink);
+}
+.home-nav { margin-top: 4rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.idx-folio { list-style: none; padding: 0; margin: 0; }
+.idx-folio li {
+  display: flex; gap: 0.9rem;
+  align-items: baseline; padding: 0.35rem 0;
+}
+.idx-folio .num { color: var(--muted); font-size: 0.85em; min-width: 2.4em; }
+.idx-cluster { margin-top: 1.2rem; }
+.idx-cluster + .idx-cluster { margin-top: 2rem; }
+.idx-cluster h3 {
+  font-family: "Times New Roman", serif; font-style: normal;
+  font-weight: 400; font-size: 1em; color: var(--muted);
+  margin: 1.4rem 0 0.6rem; letter-spacing: 0.02em;
+}
+
+/* =============================================
+   NOTES PAGE
+   ============================================= */
+.notes-header { padding-top: 4rem; }
+.notes-kind {
+  font-size: 0.85em; color: var(--muted);
+  margin-top: 0.5rem; margin-bottom: 0;
+}
+.notes-title {
+  font-family: "Instrument Serif","Times New Roman", Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.15; margin: 0.5rem 0 0; font-weight: 400;
+}
+.notes-body { margin-top: 2.5rem; }
+.notes-body p   { margin: 0 0 1.5em; }
+.notes-body ul, .notes-body ol { padding-left: 1.4em; margin: 0 0 1.5em; }
+.notes-body li  { margin-bottom: 0.4em; }
+.notes-body em  { font-style: italic; }
+.notes-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+  font-size: 0.85em; background: #f4f4f4; padding: 0.1em 0.3em;
+}
+
+/* scroll interlude */
+.scroll-interlude {
+  margin: 3rem 0; min-height: 60vh;
+  display: flex; flex-direction: column; align-items: center;
+}
+.scroll-interlude-sticky {
+  position: sticky; top: 20vh;
+  display: flex; flex-direction: column; align-items: center;
+}
+.scroll-interlude-caption {
+  color: var(--muted); font-size: 11px;
+  letter-spacing: 0.06em; margin-top: 0.5rem;
+}
+
+/* sigil */
+pre.sigil {
+  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+  font-size: 10px; line-height: 10px;
+  color: var(--muted); margin: 0 0 1.5rem; user-select: none;
+}
+
+/* adjacent / prev-next nav */
+.entry-nav {
+  margin-top: 3rem; display: flex; flex-direction: column; gap: 0.4rem;
+}
+.entry-nav-label { color: var(--muted); font-size: 0.82em; margin-bottom: 0.3rem; }
+
+/* =============================================
+   COLOPHON
+   ============================================= */
+.colophon-title {
+  font-family: "Instrument Serif","Times New Roman", Georgia, serif;
+  font-size: 2rem; margin: 1.5rem 0 2rem; font-weight: 400;
+}
+.colophon-body p { margin: 0 0 1.5em; }
+
+/* =============================================
+   REDUCED MOTION
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  .ascii-field pre.ascii, .drift { animation: none; }
+}
+
+.threshold-inner{justify-content:center;align-items:center}
+.threshold-intro,.threshold-mark{display:none}
+.threshold-word{font-size:1.2rem}
