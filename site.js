@@ -110,15 +110,11 @@ still. it's the right direction.`,
     title: "a list of objects that are secretly the same object",
     epigraph: "a coffee cup, a doughnut, a sentence, the silence after it.",
     theme: "on shape",
-    body: `- a coffee cup and a doughnut
-- a sentence and the silence after it
+    body: `- a sentence and the silence after it
 - a proof by contradiction and a proof by exhaustion (if you wait long enough)
 - a wave and the surface it travels on
-- a person at twenty and a person at sixty
 - the question and the questioner
 - a measurement and a disturbance
-- the map and the part of the territory you have walked
-- a definition and a small bet
 - the number 1 and the act of pointing`,
   },
   {
@@ -163,19 +159,16 @@ once you start noticing them you cannot stop. the loops are the load-bearing wal
   },
   {
     slug: "list-questions-i-cant-ask",
-    date: "2026.04.10",
+    date: "2026.21.06",
     kind: "list",
-    title: "questions i cannot ask in a physics seminar",
-    epigraph: "(i ask them anyway, silently, while pretending to take notes)",
+    title: "questions i can't ask in physics class",
     theme: "on devotion",
-    body: `- but why is there a universe
-- but where is the wavefunction
+    body: `- but where is the wavefunction
 - but what is a field made of
 - but what is the field a field of
-- but does the math want anything
-- but does the electron know what it's doing
 - but is this all there is
-- (i ask them anyway, silently, while pretending to take notes)`,
+- but is this all there is
+- but is this all there is`,
   },
   {
     slug: "marginalia-borges",
@@ -186,7 +179,7 @@ once you start noticing them you cannot stop. the loops are the load-bearing wal
     theme: "on numbers",
     body: `borges' library contains every possible book. so it also contains every wrong book, every almost-right book, every book that is right by accident.
 
-the librarians despair because the ratio of truth to noise is essentially zero. but this is also the situation of the human brain. we read it as wisdom.`,
+the librarians despair because the ratio of truth to noise is essentially zero. but this is also the situation of the human brain.`,
   },
   {
     slug: "note-on-categories",
@@ -476,14 +469,14 @@ function initHome() {
   // Threshold
   mountThreshold();
 
-  
+  // INTRO-PARAAAAAAAA 
   const ci=document.getElementById("custom-intro");
   if(ci){ci.innerHTML=`<p><em>“What are you?” -- Oscar Wilde </em></p>
 <p>I’m <a href="notes.html?slug=name-means">areeba</a> arbab, and I don't really know how to finish that sentence, so this is my workaround: <a href="notes.html?slug=fieldnotes-on-fieldnotes">fieldnotes</a> from a mind that refuses to be something. These are sediments of that thinking, including fragments, marginalia, some loose threads, glitches, lists that trail off… I don't know who I am, but I know what I pay attention <a href="notes.html?slug=simone-weil">(see simone weil)</a> to.</p>
 <p>That’s either barely enough for now, or it might be everything.</p>
-<p>Oscar Wilde said “to define is to limit”, but I conceptualise this <a href="colophon.html">site</a> as an extension of the <a href="notes.html?slug=the-oscar-wilde-quote">“clue”</a>) in its seldom-remembered response.</p>
+<p>Oscar Wilde said <em> “to define is to limit”, </em> but I conceptualise this <a href="colophon.html">site</a> as an extension of the <a href="notes.html?slug=the-oscar-wilde-quote">“clue”</a>) in its seldom-remembered response.</p>
 <p><em>“Threads snap. You would lose your way in the labyrinth.” -- ibidem </em></p> And:
-<p><em>“In the end, we self-perceiving, self-inventing, locked-in mirages are little miracles of self-reference.” -- Douglas Hofstadter.</em></p>`;}
+<p><em>“In the end, we self-perceiving, self-inventing, locked-in mirages are little miracles of self-reference.” -- Douglas Hofstadter.</em></p>:`;}
 
   // ASCII hero
   const pre = document.getElementById("ascii-hero");
