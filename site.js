@@ -523,7 +523,7 @@ function initNotes() {
 
   // Meta
   const kindEl=document.getElementById("notes-kind");
-  if (kindEl) kindEl.textContent=entry.kind;
+  if (kindEl) kindEl.textContent="";
 
   const titleEl=document.getElementById("notes-title");
   if (titleEl) titleEl.textContent=entry.title;
