@@ -478,12 +478,12 @@ function initHome() {
 
   
   const ci=document.getElementById("custom-intro");
-  if(ci){ci.innerHTML=`<p><em>“What are you?”</em> – oscar wilde</p>
-<p>I’m areeba <a href="notes.html?slug=name-means">arbab</a>, and I don't really know how to finish that sentence, so this is my workaround: <a href="notes.html?slug=fieldnotes-on-fieldnotes">fieldnotes</a> from a mind that refuses to be something. These are sediments of that thinking, including fragments, marginalia, some loose threads, glitches, lists that trail off… I don't know who I am, but I know what I pay attention <a href="notes.html?slug=simone-weil">(see simone weil)</a> to.</p>
+  if(ci){ci.innerHTML=`<p><em>“What are you?” -- Oscar Wilde </em></p>
+<p>I’m <a href="notes.html?slug=name-means">areeba</a> arbab, and I don't really know how to finish that sentence, so this is my workaround: <a href="notes.html?slug=fieldnotes-on-fieldnotes">fieldnotes</a> from a mind that refuses to be something. These are sediments of that thinking, including fragments, marginalia, some loose threads, glitches, lists that trail off… I don't know who I am, but I know what I pay attention <a href="notes.html?slug=simone-weil">(see simone weil)</a> to.</p>
 <p>That’s either barely enough for now, or it might be everything.</p>
-<p>Oscar Wilde said “to define is to limit”, but I conceptualise this site (<a href="colophon.html">colophon</a>) as an extension of the “clue” (<a href="notes.html?slug=the-oscar-wilde-quote">the oscar wilde quote</a>) in its seldom-remembered response.</p>
-<p>“Threads snap. You would lose your way in the labyrinth.” –Oscar Wilde</p>
-<p>“In the end, we self-perceiving, self-inventing, locked-in mirages are little miracles of self-reference.” ― Douglas Hofstadter.</p>`;}
+<p>Oscar Wilde said “to define is to limit”, but I conceptualise this <a href="colophon.html">site</a> as an extension of the <a href="notes.html?slug=the-oscar-wilde-quote">“clue”</a>) in its seldom-remembered response.</p>
+<p><em>“Threads snap. You would lose your way in the labyrinth.” -- ibidem </em></p> And:
+<p><em>“In the end, we self-perceiving, self-inventing, locked-in mirages are little miracles of self-reference.” -- Douglas Hofstadter.</em></p>`;}
 
   // ASCII hero
   const pre = document.getElementById("ascii-hero");
