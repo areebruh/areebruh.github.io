@@ -27,10 +27,12 @@ const WRITINGS_EPIGRAPH = {
 //         interludes (optional ASCII breaks — see existing essays for format)
 
 const ENTRIES = [
-  {slug:"name-means",date:"2026.06.20",kind:"list",title:"A list of things my name means",theme:"misc",body:"A placeholder page. A name is an archive, a rumour, an inheritance. More to come."},
-  {slug:"fieldnotes-on-fieldnotes",date:"2026.06.20",kind:"note",title:"fieldnotes on fieldnotes",theme:"misc",body:"Placeholder text. Notes about notes. Margins about margins. A notebook turning back on itself."},
-  {slug:"simone-weil",date:"2026.06.20",kind:"note",title:"simone weil and attention",theme:"misc",body:"Placeholder text. I do not know who I am, but I know what I pay attention to."},
-  {slug:"the-oscar-wilde-quote",date:"2026.06.20",kind:"essay",title:"the oscar wilde quote",theme:"misc",body:"Placeholder text discussing ‘to define is to limit’ and the labyrinth."},
+  {slug:"name-means",date:"2026.06.20",kind:"list",title:"A list of things my name means",theme:"misc",body:"1. Tie a knot 2. Tear to pieces 3. The ancient Arbela 4. Try to outwit 5. The “other uses” of Moses’s staff 6. The capital of the Ancient kingdom of Saba’ 7. Intelligence, skillfulness and proficiency  8. Wish and desire, purpose and goal 9. A dam in Yemen. 
+"},
+   
+  {slug:"fieldnotes-on-fieldnotes",date:"2026.06.20",kind:"note",title:"fieldnotes on fieldnotes",theme:"misc",body:"Notes about notes. Margins about margins. A notebook turning back on itself. Fieldnotes "},
+  {slug:"simone-weil",date:"2026.06.20",kind:"note",title:"simone weil and attention",theme:"misc",body:"Weilian attention"},
+  {slug:"the-oscar-wilde-quote",date:"2026.06.20",kind:"essay",title:"the oscar wilde quote",theme:"misc",body:"“What of art?” she asked. “It is a malady.” “Love?” “An illusion.” “Religion?” “The fashionable substitute for belief.” “You are a sceptic.” “Never! Scepticism is the beginning of faith.” “What are you?” “To define is to limit.” “Give me a clue.” “Threads snap. You would lose your way in the labyrinth.”"},
   {
     slug: "softness-of-proofs",
     date: "2026.06.18",
