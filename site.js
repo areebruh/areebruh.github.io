@@ -523,10 +523,10 @@ function initNotes() {
 
   // Meta
   const kindEl=document.getElementById("notes-kind");
-  if (kindEl) kindEl.textContent="";
+  if (kindEl) kindEl.textContent=entry.kind;
 
   const titleEl=document.getElementById("notes-title");
-  if (titleEl) titleEl.textContent="";
+  if (titleEl) titleEl.textContent=entry.title;
 
   // Body
   const bodyEl=document.getElementById("notes-body");
