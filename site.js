@@ -1,13 +1,8 @@
-/* =============================================
-   fieldnotes — areeba arbab
-   site.js  ·  one file, no build tools needed
-   ============================================= */
-
 "use strict";
 
-// =============================================
-// CONTENT — edit freely
-// =============================================
+// ===========
+// CONTENT 
+// ===========
 
 const INTRO = `i think about mathematics the way some people think about god, as something you can only ever approach obliquely, never quite arriving. these are fieldnotes: lists, fragments, marginalia, small rooms of unsorted thinking.`;
 const INTRO_CTA = "come read ?";
@@ -20,11 +15,10 @@ const WRITINGS_EPIGRAPH = {
   author: "Roland Barthes, The Death of the Author",
 };
 
-// To add a new entry: copy one of the objects below and paste it at the top
-// of the array. The folio numbers update automatically.
-// Fields: slug (URL), date, kind, title, body (plain text, blank line = new para),
+// chrono order based on whats pasted on top
+// Fields: slug (URL), date, kind (type of content), title, body (plain text, blank line = new para),
 //         epigraph (optional pull-quote), theme (optional grouping label),
-//         interludes (optional ASCII breaks — see existing essays for format)
+//         interludes (optional ASCII breaks)
 
 const ENTRIES = [
   {slug:"name-means",date:"2026.06.20",kind:"list",title:"A list of things my name means",theme:"misc",body:"1. Tie a knot 2. Tear to pieces 3. The ancient Arbela 4. Try to outwit 5. The “other uses” of Moses’s staff 6. The capital of the Ancient kingdom of Saba’ 7. Intelligence, skillfulness and proficiency  8. Wish and desire, purpose and goal 9. A dam in Yemen."},
@@ -211,7 +205,7 @@ this is why it feels mystical to people who have not done it, and why it feels o
 ];
 
 // =============================================
-// FOLIO NUMBERS (Arabic-Indic, matching original)
+// FOLIO NUMBERS 
 // =============================================
 
 const ARABIC_INDIC = ["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"];
