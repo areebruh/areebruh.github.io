@@ -25,8 +25,7 @@ const ENTRIES = [
   },
   {slug:"simone-weil",date:"2026.06.20",kind:"note",title:"simone weil and attention",theme:"misc",body:"Weilian attention"},
   {slug:"the-oscar-wilde-quote",date:"2026.06.20",kind:"essay",title:"the oscar wilde quote",theme:"misc",body:"“What of art?” she asked.<br> “It is a malady.” <br>“Love?”<br> “An illusion.” <br>“Religion?” <br>“The fashionable substitute for belief.” <br> “You are a sceptic.” <br> “Never! Scepticism is the beginning of faith.” <br> “What are you?” <br> “To define is to limit.” <br> “Give me a clue.” <br> “Threads snap. You would lose your way in the labyrinth.” "},
-  {<br>
-    slug: "softness-of-proofs",
+  {slug: "softness-of-proofs",
     date: "2026.06.18",
     kind: "essay",
     title: "on the unreasonable softness of proofs",
